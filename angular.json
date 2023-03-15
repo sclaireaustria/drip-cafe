@@ -30,7 +30,8 @@
               "node_modules/open-iconic/font/css/open-iconic-bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {

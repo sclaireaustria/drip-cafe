@@ -1,0 +1,47 @@
+.bg {
+  background-color: #FFE8D7;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+
+.row {
+  height: 100%;
+}
+
+.col {
+  height: 100%;
+}
+
+h6 {
+  text-transform: uppercase;
+  font-family: GTWalsheim-Bold;
+}
+
+h1 {
+  font-family: GTFlexa-Bold;
+}
+
+h3 {
+  font-family: GTFlexa;
+  font-weight: 550;
+}
+
+#amountText {
+  color: #FC4900;
+  font-family: GTFlexa-Bold;
+}
+
+p {
+  font-family: GTFlexa;
+}
+
+#featuredVector {
+  height: 60%;
+}
+
+#productImage {
+  /* top: 5rem; */
+}

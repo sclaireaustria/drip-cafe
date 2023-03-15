@@ -1,0 +1,75 @@
+.bg {
+  height: 100%;
+  background-color: #FFE8D7;
+}
+
+#mainContainer {
+  height: 80%;
+}
+
+.topHeight {
+  height: 100%;
+}
+
+.bottomRowHeight {
+  height: 20%;
+  background-color: #FC4900;
+  width: 100%;
+}
+
+.topRightCol {
+  height:100%;
+}
+
+.bottomRightCol {
+  height:90%;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+#baristaImg {
+  height: 90%;
+}
+
+h1 {
+  font-family:GTFlexa-Bold;
+  color: #FC4900;
+}
+
+h5 {
+  font-family: GTWalsheim;
+}
+
+.pullBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end !important;
+}
+
+#subscribeInput {
+  border-top-left-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-color: #1C1B1B;
+}
+
+#subscribeBtn {
+  border-top-right-radius: 25px !important;
+  border-bottom-right-radius: 25px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  border-color: #1C1B1B !important;
+  position: relative;
+  left: -10px;
+  background-color: #F9B100;
+}
+
+#espressoMachineImg {
+  height: 80%;
+  position: relative;
+  left: -13rem;
+  bottom: -5rem;
+}

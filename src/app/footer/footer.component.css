@@ -1,0 +1,20 @@
+marquee {
+  height: 4rem;
+  border: 2rem;
+  border-color: #1C1B1B;
+  background-color: #FF8DB0;
+}
+
+img {
+  height: 80%;
+}
+
+h4 {
+  font-family: GTFlexa;
+  font-weight: 400;
+}
+
+.containerDiv {
+  width: 100% !important;
+  height: 4rem;
+}

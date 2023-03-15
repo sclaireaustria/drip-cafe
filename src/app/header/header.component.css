@@ -1,5 +1,25 @@
 .navbar {
   background-color: #FFE8D7;
+  height: 8rem;
+  transition: height 0.3s ease-in-out;
+}
+
+.navbar-logo img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.navbar.shrink {
+  height: 6rem;
+}
+
+#navbarLogo {
+  height: 6.25rem;
+  transition: height 0.3s ease-in-out;
+}
+
+#navbarLogo.shrink {
+  height: 4em !important;
 }
 
 .header-text {
@@ -18,10 +38,6 @@
   padding-top: 0px;
 }
 
-.navbar .navbar-brand img {
-  height: 100px;
-}
-
 #searchRow {
   width: 500px;
   font-family: GTFlexa;
@@ -32,6 +48,19 @@
   border-color: #1C1B1B;
 }
 
+#searchInput:focus {
+  border-color: #F9B100 !important;
+  box-shadow: none !important;
+}
+
 #searchBtn {
   margin-left: -50px;
+}
+
+#searchIcon.focus {
+  color: #F9B100 !important;
+}
+
+::-ms-clear {
+  display: none;
 }

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: GTFlexa;
+  src: url(../assets/fonts/GTFlexaAllNue7.ttf);
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: GTFlexa-Bold;
+  src: url(../assets/fonts/GTFlexaAllNue7.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: GTWalsheim;
+  src: url(../assets/fonts/gt-walsheim-regular.ttf);
+}
+
+@font-face {
+  font-family: GTWalsheim-Bold;
+  src: url(../assets/fonts/gt-walsheim-bold.ttf);
+}

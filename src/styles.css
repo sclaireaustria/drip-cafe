@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+}
+
+.ps-120 {
+  padding-left: 120px;
+}
+
+.pe-120 {
+  padding-right: 120px;
+}

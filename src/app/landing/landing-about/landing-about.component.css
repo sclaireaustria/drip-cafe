@@ -3,6 +3,8 @@
   height: 100%;
 }
 
+/********** FIRST ROW **********/
+
 #aboutUsDiv {
   width: 70%;
   height: 80%;
@@ -16,19 +18,24 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: -20px 20px #1C1B1B;
 }
 
 #aboutUsContainer {
-  height: 75%;
-  width: 100%;
+  height: 100%;
+  max-width: 100%;
 }
 
 .row {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
 }
 
-h5 {
+#firstRow {
+  height: 75%;
+}
+
+#aboutUsh5 {
   font-family: GTWalsheim-Bold;
 }
 
@@ -57,4 +64,27 @@ p {
 
 #coffeeBeansImg {
   transform: scale(0.8);
+}
+
+/********** SECOND ROW **********/
+
+#secondRow {
+  height: 25%;
+}
+
+#qualityOne {
+  background-color: #FFB6CC;;
+}
+
+#qualityTwo {
+  background-color: #F9B100;
+}
+
+#qualityThree {
+  background-color: #FFE8D7;
+}
+
+.qualityCol {
+  height: 100%;
+  font-family: GTFlexa-Bold;
 }

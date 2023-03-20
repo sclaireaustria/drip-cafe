@@ -65,6 +65,8 @@ h5 {
   position: relative;
   left: -10px;
   background-color: #F9B100;
+  font-family: GTFlexa;
+  font-weight: 500;
 }
 
 #espressoMachineImg {

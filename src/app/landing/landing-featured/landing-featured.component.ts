@@ -7,5 +7,20 @@ import { Product } from 'src/app/data-model/product';
   styleUrls: ['./landing-featured.component.css']
 })
 export class LandingFeaturedComponent {
-  product: Product = new Product('Salted Caramel Cold Brew', 180, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/salted-caramel.png');
+  selectedProduct: Product = new Product('',0,'','');
+  activeButton: number = 0;
+  products: Product[] = [
+    new Product('Salted Caramel Cold Brew', 180, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/salted-caramel.png'),
+    new Product('Sweet Cream Cold Brew', 200, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/sweet-cream-cold-brew.png'),
+    new Product('Some other drink', 250, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/sweet-cream-cold-brew.png')
+  ];
+
+  constructor() {
+    // Set the default value
+    this.selectedProduct = this.products[0];
+  }
+
+  selectProduct(product: Product) {
+    this.selectedProduct = product;
+  }
 }

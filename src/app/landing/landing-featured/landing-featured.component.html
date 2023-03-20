@@ -1,25 +1,42 @@
 <div class="bg">
   <div class="container">
     <div class="row d-flex align-items-center">
-      <div class="col-md-7">
+      <div class="col-md-7 fullHeight">
         <div class="container">
-          <div class="row d-flex align-items-center">
-            <div class="col col-md-4">
-              sfsfs
+          <div class="row">
+            <!-- Featured Product List  -->
+            <div class="col col-md-4 mt-5">
+              <div class="featuredProductList d-block mt-5" id="featuredProductList">
+                <button
+                  *ngFor="let product of products; let i = index"
+                  [class.active]="activeButton === i"
+                  (click)="selectProduct(product);activeButton = i"
+                  class="featuredProductItem mb-4 mx-4">
+                    <img [src]="product.image" alt="" class="px-3 py-3 productListImg">
+                </button>
+              </div>
             </div>
-            <div class="col col-md-8">
-              <!-- <img [src]="product.image" [alt]="product.name" id="productImage" class="my-auto"> -->
-              <img src="../../../assets/images/featured-vector.png" alt="" id="featuredVector">
+
+            <!-- Selected featured product  -->
+            <div class="col col-md-8 featuredPhotoContainer ">
+              <div class="container imageStack d-flex align-items-center">
+                <img src="../../../assets/images/featured-vector.png" alt="" id="featuredVector" class="imageStackPhoto">
+                <!-- <img [src]="selectedProduct.image" alt="" id="featuredPhoto" class="imageStackPhoto"> -->
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 ps-5">
         <h6>Products</h6>
         <h1 class="mb-5">Our Best Offers</h1>
-        <h3 class="mb-3">{{ product.name }}</h3>
-        <h3 class="mb-3" id="amountText">₱ {{ product.amount }}</h3>
-        <p>{{ product.description }}</p>
+        <h3 class="mb-3">{{ selectedProduct.name }}</h3>
+        <p>{{ selectedProduct.description }}</p>
+        <h3 class="mb-5" id="amountText">₱ {{ selectedProduct.amount }}</h3>
+
+        <button class="btn rounded-pill border-2 btnText" type="button" id="menuButton">
+          View full menu
+        </button>
       </div>
     </div>
   </div>

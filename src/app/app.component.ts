@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { shrinkNavOnScroll, changeOnClick} from '../app/javascript-functions.js';
+import { shrinkNavOnScroll, changeOnClick } from '../assets/scripts/javascript-functions.js';
 
 declare var $: any;
 @Component({
@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     shrinkNavOnScroll()
     changeOnClick()
-
   }
 
 }

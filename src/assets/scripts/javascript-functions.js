@@ -26,3 +26,11 @@ exports.changeOnClick=function() {
     searchIcon.classList.remove('focus');
   });
 }
+
+exports.toggleCart=function() {
+  const cart = document.querySelector('#cart');
+
+  cart.addEventListener('click', () => {
+    $(".shopping-cart").fadeToggle( "fast");
+  });
+}

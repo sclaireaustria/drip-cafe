@@ -61,6 +61,143 @@
   color: #F9B100 !important;
 }
 
-::-ms-clear {
+/********** Cart **********/
+#cartIcon {
+  font-size: 1.5rem;
+}
+
+#cartDiv {
+  margin-top: 1.9rem;
+  width: 20rem;
+  background-color: #FFFDFC;
+  border-radius: 25px !important;
+  overflow: hidden;
+  font-family: GTFlexa;
+  border: 2px solid #1C1B1B;
+  box-sizing: border-box;
+}
+
+.dropdown-toggle::after {
   display: none;
+}
+
+.solidHr {
+  border: 1px solid #1C1B1B;
+  opacity: 100;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.badge {
+  background-color: #F9B100 !important;
+  border-radius: 50%;
+  color: #1C1B1B;
+}
+
+#cartBadge {
+  position: relative;
+  left: -17px;
+  top: -10px;
+}
+
+.cartItem {
+  font-size: 0.85rem;
+  border-bottom: 1px solid #F3F3F3;
+  opacity: 100;
+}
+
+.cartItemImg {
+  max-height: 4.5rem;
+  display: inline-block;
+}
+
+.cartItemQuantity {
+  background-color: transparent;
+  border: none;
+  height: 1.313rem !important;
+}
+
+.cartItemName {
+  font-weight: 500;
+}
+
+.counterBtn {
+  border: none;
+}
+
+.counterBtn:hover {
+  border: none;
+  background-color: transparent;
+  color: #1C1B1B;
+}
+
+/* Remove up and down arrow for number input - Chrome Safari  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove up and down arrow for number input - Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+a:focus {
+  outline: none;
+}
+
+.totalAmount {
+  font-weight: 550;
+}
+
+.container {
+  width: 100%;
+}
+
+.quantityGroup {
+  width: 4rem !important;
+  height: 1.313rem !important;
+}
+
+.cartRow {
+  height: 6.25rem;
+}
+
+#checkoutBtn {
+  width: 100%;
+  background-color: #F9B100;
+  border-top: 2px solid #1C1B1B;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  font-weight: 550;
+}
+
+#checkoutBtn {
+  position: relative;
+  display: inline-block;
+  padding-right: 15px; /* add padding on the right to make room for the arrow */
+  color: #1C1B1B;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* add a transition effect to the button */
+}
+
+#checkoutBtn::after {
+  content: '→';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out; /* add a transition effect to the arrow */
+  opacity: 0; /* set the opacity of the arrow to 0 by default */
+}
+
+#checkoutBtn:hover {
+  padding-right: 30px; /* increase the padding on hover to make room for the arrow */
+  color: #1C1B1B;
+}
+
+#checkoutBtn:hover::after {
+  opacity: 1; /* set the opacity of the arrow to 1 on hover */
+  right: 10px; /* move the arrow to the right on hover */
 }

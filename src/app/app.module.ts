@@ -9,6 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 import { LandingFeaturedComponent } from './landing/landing-featured/landing-featured.component';
 import { LandingSubscribeComponent } from './landing/landing-subscribe/landing-subscribe.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

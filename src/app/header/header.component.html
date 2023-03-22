@@ -28,9 +28,66 @@
       </button>
     </form>
 
-    <button class="btn ps-4 pe-5" type="button" id="cartBtn">
+    <!-- <button class="btn ps-4 pe-5" type="button" id="cartBtn">
       <i class="bi bi-basket3-fill header-text"></i>
-    </button>
+    </button> -->
+
+    <li class="nav-item dropdown d-flex ps-4 pe-5">
+      <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-basket3-fill header-text" id="cartIcon"></i>
+        <span class="badge ms-2" id="cartBadge">{{ shoppingCart.length }}</span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end py-0" id="cartDiv">
+        <li>
+          <div class="col-12 text-center px-3 py-2">
+            <h3 class="mt-1">Your Cart</h3>
+          </div>
+        </li>
+        <hr class="solidHr">
+        <li *ngFor="let cartItem of shoppingCart; let i = index" class="cartItem">
+          <div class="container py-2">
+            <div class="row px-3 text-wrap py-2 cartRow">
+              <div class="col-4">
+                <div class="container">
+                  <img [src]="cartItem.product.image" alt="" class="cartItemImg">
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="container">
+                  <p class="mb-1 lh-1 cartItemName">{{ cartItem.product.name }}</p>
+                  <p class="mb-1 cartItemAmount">Php {{ (cartItem.product.amount * cartItem.quantity).toLocaleString() }}</p>
+
+                  <div class="input-group quantityGroup">
+                    <div class="input-group-prepend" >
+                      <button class="btn btn-outline-secondary counterBtn ps-0 pe-1 py-0" type="button">-</button>
+                    </div>
+                    <input type="number" class="form-control shadow-none text-center cartItemQuantity px-1 py-0" id="" [(ngModel)]="cartItem.quantity">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary counterBtn px-1 py-0" type="button">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <hr class="solidHr">
+        <li class="">
+          <div class="container">
+            <div class="row">
+              <div class="col d-flex justify-content-between mx-3 totalAmount py-3">
+                <p class="text-start mb-0">Total:</p>
+                <p class="text-end mb-0">Php {{ totalAmount.toLocaleString() }}</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <button class="btn arrow py-3" id="checkoutBtn">
+          Checkout
+        </button>
+      </ul>
+    </li>
 
   </div>
 </nav>

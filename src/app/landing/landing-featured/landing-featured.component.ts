@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from 'src/app/data-model/product';
+import { Product } from 'src/app/model/product';
 
 @Component({
   selector: 'app-landing-featured',

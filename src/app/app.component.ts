@@ -9,10 +9,15 @@ declare var $: any;
 })
 export class AppComponent implements OnInit {
   title = 'drip-cafe';
+  showHeaderAndFooter = true;
+
+  constructor() {
+  }
 
   ngOnInit(){
     shrinkNavOnScroll()
     changeOnClick()
+
   }
 
 }

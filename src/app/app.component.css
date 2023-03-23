@@ -23,3 +23,7 @@
   src: url(../assets/fonts/gt-walsheim-bold.ttf);
 }
 
+@font-face {
+  font-family: Bootstrap-Icons;
+  src: url(../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff);
+}

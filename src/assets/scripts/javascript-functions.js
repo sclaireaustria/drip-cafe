@@ -34,3 +34,4 @@ exports.toggleCart=function() {
     $(".shopping-cart").fadeToggle( "fast");
   });
 }
+

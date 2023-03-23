@@ -53,7 +53,7 @@ h5 {
   border-bottom-left-radius: 25px !important;
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
-  border-color: #1C1B1B;
+  border: 2px solid #1C1B1B;
 }
 
 #subscribeBtn {
@@ -61,12 +61,12 @@ h5 {
   border-bottom-right-radius: 25px !important;
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
-  border-color: #1C1B1B !important;
-  position: relative;
-  left: -10px;
+  border: 2px solid #1C1B1B;
+  border-left: none;
   background-color: #F9B100;
   font-family: GTFlexa;
   font-weight: 500;
+  color: #1C1B1B
 }
 
 #espressoMachineImg {

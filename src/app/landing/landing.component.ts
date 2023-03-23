@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-landing',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
+
+  constructor(private appComponent: AppComponent) {
+    appComponent.showHeaderAndFooter = true;
+  }
+
 
 }

@@ -12,6 +12,7 @@ export class MenuComponent {
 
   currentPage = 1;
   itemsPerPage = 8;
+  currentType: string ='All';
   pageNumbers: number[] = [];
   typesOfProduct: ProductType[] = [];
   listOfProducts: Product[] = [];
@@ -19,22 +20,25 @@ export class MenuComponent {
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.listOfProducts = this.productService.getProducts();
     this.typesOfProduct = this.retrieveTypesOfProducts(true);
+    this.reloadAndFilterList(true,'All');
     this.pageNumbers = Array(Math.ceil(this.listOfProducts.length / this.itemsPerPage)).fill(0).map((x, i) => i + 1);
   }
 
   reloadAndFilterList(isDrink: boolean, filterCriteria: string) {
+    this.currentType = filterCriteria;
     if (filterCriteria === 'All') {
       this.listOfProducts = this.productService.getProducts();
     } else {
       this.listOfProducts = this.productService.getProducts().filter(product => product.type.drink_indicator === isDrink && product.type.type === filterCriteria);
     }
+    this.pageNumbers = Array(Math.ceil(this.listOfProducts.length / this.itemsPerPage)).fill(0).map((x, i) => i + 1);
   }
 
   reloadViaHeading(isDrink: boolean) {
     this.listOfProducts = this.productService.getProducts().filter(product => product.type.drink_indicator === isDrink);
     this.typesOfProduct = this.retrieveTypesOfProducts(isDrink);
+    this.pageNumbers = Array(Math.ceil(this.listOfProducts.length / this.itemsPerPage)).fill(0).map((x, i) => i + 1);
   }
 
   retrieveTypesOfProducts(isDrink: boolean): ProductType[] {

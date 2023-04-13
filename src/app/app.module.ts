@@ -12,6 +12,8 @@ import { LandingFeaturedComponent } from './landing/landing-featured/landing-fea
 import { LandingSubscribeComponent } from './landing/landing-subscribe/landing-subscribe.component';
 import { FooterComponent } from './footer/footer.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MenuComponent } from './menu/menu.component';
 
 const appRoutes: Routes = [
   {path: '', component: LandingComponent},
@@ -27,13 +29,15 @@ const appRoutes: Routes = [
     LandingFeaturedComponent,
     LandingSubscribeComponent,
     FooterComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

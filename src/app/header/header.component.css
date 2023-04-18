@@ -34,6 +34,10 @@
   margin-right: 20px;
 }
 
+.active {
+  text-decoration: underline;
+}
+
 .navbar .navbar-brand {
   padding-top: 0px;
 }
@@ -201,3 +205,4 @@ a:focus {
   opacity: 1; /* set the opacity of the arrow to 1 on hover */
   right: 10px; /* move the arrow to the right on hover */
 }
+

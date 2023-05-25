@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Product } from '../data/product';
+import { Product } from '../model/product';
 import { ProductType } from '../data/product-type';
 import { ProductService } from '../services/product/product.service';
+import { CartService } from '../services/cart/cart.service';
 
 @Component({
   selector: 'app-menu',
@@ -17,7 +18,7 @@ export class MenuComponent {
   typesOfProduct: ProductType[] = [];
   listOfProducts: Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private cartService: CartService) { }
 
   ngOnInit() {
     this.typesOfProduct = this.retrieveTypesOfProducts(true);
@@ -53,5 +54,16 @@ export class MenuComponent {
 
   onPageChange(pageNumber: number): void {
     this.currentPage = pageNumber;
+  }
+
+  addToCart(product: Product) {
+    const cartItems = this.cartService.getItems();
+    const cartItem = cartItems.find((item) => item.product.id === product.id);
+
+    if (cartItem) {
+      cartItem.increaseQuantity();
+    } else {
+      this.cartService.addItem(product);
+    }
   }
 }

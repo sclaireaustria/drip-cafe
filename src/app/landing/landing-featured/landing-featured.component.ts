@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductType } from 'src/app/data/product-type';
 import { Product } from 'src/app/model/product';
 
 @Component({
@@ -7,12 +8,11 @@ import { Product } from 'src/app/model/product';
   styleUrls: ['./landing-featured.component.css']
 })
 export class LandingFeaturedComponent {
-  selectedProduct: Product = new Product('',0,'','');
+  selectedProduct: Product = new Product(1,'',new ProductType(1, true, 'Coffee'),0,'','');
   activeButton: number = 0;
   products: Product[] = [
-    new Product('Salted Caramel Cold Brew', 180, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/salted-caramel.png'),
-    new Product('Sweet Cream Cold Brew', 200, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/sweet-cream-cold-brew.png'),
-    new Product('Some other drink', 250, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/sweet-cream-cold-brew.png')
+    new Product(1, 'Salted Caramel Cold Brew', new ProductType(1, true, 'Coffee'), 180, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/salted-caramel.png'),
+    new Product(2, 'Some other drink', new ProductType(1, true, 'Coffee'), 250, 'Our Signature Starbucks Cold Brew flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.','../../../assets/images/products/sweet-cream-cold-brew.png')
   ];
 
   constructor() {

@@ -5,4 +5,8 @@ export class CartItem {
     public product: Product,
     public quantity: number
   ) {}
+
+  increaseQuantity() {
+    this.quantity++;
+  }
 }

@@ -6,6 +6,26 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/navbar-logo.png">
+
+  <!-- SAP CDC Web SDK (Start) -->
+  <script>
+  function login() {
+    gigya.accounts.showScreenSet({
+      screenSet:'SCA-Test-RegistrationLogin',
+      //screenSet:'Default-RegistrationLogin',
+      onAfterSubmit: getFirstName
+    });
+  }
+
+  function getFirstName(eventObj) {
+    var firstName = eventObj.profile.firstName;
+    const spanElement = document.getElementById("userFirstName");
+    spanElement.innerText = firstName;
+  }
+  </script>
+
+  <script type="text/javascript" src="https://cdns.global.gigya.com/js/gigya.js?apikey=4_y2Wur9Y-_vXbaGLREzTnjQ"></script>
+  <!-- SAP CDC Web SDK (End) -->
 </head>
 <body>
   <app-root></app-root>

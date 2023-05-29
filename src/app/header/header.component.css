@@ -206,3 +206,6 @@ a:focus {
   right: 10px; /* move the arrow to the right on hover */
 }
 
+#userIcon {
+  font-size: 1.5rem;
+}

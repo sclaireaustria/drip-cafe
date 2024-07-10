@@ -11,12 +11,14 @@
   <script>
   function login() {
     gigya.accounts.showScreenSet({
-      screenSet:'SCA-Test-RegistrationLogin',
-      //screenSet:'Default-RegistrationLogin',
+      //screenSet:'SCA-Test-RegistrationLogin',
+      //onAfterSubmit: getFirstName
+      screenSet:'matienza-RegistrationLogin',
       onAfterSubmit: getFirstName
     });
   }
 
+  // Get the first name of the account and display in navbar
   function getFirstName(eventObj) {
     var firstName = eventObj.profile.firstName;
     const spanElement = document.getElementById("userFirstName");
@@ -24,7 +26,13 @@
   }
   </script>
 
-  <script type="text/javascript" src="https://cdns.global.gigya.com/js/gigya.js?apikey=4_y2Wur9Y-_vXbaGLREzTnjQ"></script>
+  <!-- Sandbox Site A -->
+  <script src="https://cdns.global.gigya.com/js/gigya.js?apikey=4_JVlNWDladdTpvOTfrsluQQ"></script>
+
+  <!-- Sandbox China 4_y1L0LHOOfoylf0oID78KGA -->
+  <!-- <script src="https://cdns.cn1.sapcdm.cn/js/gigya.js?apikey=4_y1L0LHOOfoylf0oID78KGA"></script> -->
+
+  <!-- <script type="text/javascript" src="https://cdns.global.gigya.com/js/gigya.js?apikey=4_y2Wur9Y-_vXbaGLREzTnjQ"></script> -->
   <!-- SAP CDC Web SDK (End) -->
 </head>
 <body>
